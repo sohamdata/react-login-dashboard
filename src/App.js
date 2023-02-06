@@ -3,14 +3,13 @@ import AddUser from "./components/User/AddUser";
 import UsersList from "./components/User/UsersList";
 
 function App() {
-  // let userList = {
-  //   "Soham": 19,
-  //   "latino": 69,
-  //   "el chapo": 54,
-  //   "gort&quandale": 15,
-  // };
+  let userList = [
+    { id: 1, name: "soham", age: 19 },
+    { id: 2, name: "gort", age: 69 },
+    { id: 3, name: "quandale", age: 21 },
+  ];
 
-  const [usersList, setUsersList] = useState([]);
+  const [usersList, setUsersList] = useState(userList);
 
   const addUserDetails = (uName, uAge) => {
     setUsersList((prevUsersList) => {
